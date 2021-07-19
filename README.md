@@ -1,1 +1,7 @@
 # GLYCO-LongTerm-and-Instantaneous-Glucose-Prediction-from-HRV
+
+This repository contains open-source data and python scripts for training feed-forward neural networks made available to the general public by Innovation DOOEL.
+The objective is to determine whether a subject regulates glucose well or badly in both short (through instantaneous glucose measeurements) and long-term (through glycated hemoglobin) time periods.
+When the training jupyter notebooks or python scripts are executed, separate folders are created for the results of each fold when using cross-validation and for the cummulative results of each hyperparameter combination in the hyperparameter search space, for files defining the search space, and metadata about the folds created within the scripts.
+The scripts train feed-forward neural networks through a custom-made keras wrapper for simpler use. The trained models are then saved as .h5 files and can be used for custom use by anyone.
+The data files contain HRV (heart rate variability) calculations for long and short-term time intervals. For the short-time intervals (measures of instantaneous glucose) there are both fasting and non-fasting datasets, which are defined by whether the subjects have eaten a couple of hours before the measurement has occured. Correlations of HRV with blood glucouse are higher for the fasting glucose measurements and can be viewed in the paper titled Correlating Short-Term Heart Rate Variability and Instantaneous Blood Glucose Measurements (https://ieeexplore.ieee.org/abstract/document/9306517)
